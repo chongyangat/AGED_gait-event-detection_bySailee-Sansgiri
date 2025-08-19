@@ -24,16 +24,16 @@ clc;
 
 %% Inital set-up
 
-% TestDIR=uigetdir([], ‘Select the folder with the test data’); test out to
+% TestDIR=uigetdir([], â€˜Select the folder with the test dataâ€™); test out to
 % automatic select the folder
-btkFolder     = 'P:\Projects\NCM_CP\read_only\Codes\Codes_Basics\Codes_UKBB\btk';%add location were btk folder from biomechanical toolkit is saved
+btkFolder     = 'D:\software\btk_0.3.0_Win7_MatlabR2009b_64bit\btk';%add location were btk folder from biomechanical toolkit is saved
 addpath(btkFolder);
-addpath('P:\Projects\NCM_CP\project_only\NCM_CP_GaitEventDetection\Manuscript\G&P_v1\GitLab_Codes'); %add path to where zyou saved our matlab functions
-addpath('P:\Projects\NCM_CP\project_only\NCM_CP_GaitEventDetection\Manuscript\G&P_v1\GitLab_Codes\example_c3d'); %add path towards c3d files
+addpath('D:\motiondata\HEAT_gait-event-detection\AGED_gait-event-detection-main'); %add path to where zyou saved our matlab functions
+% addpath('P:\Projects\NCM_CP\project_only\NCM_CP_GaitEventDetection\Manuscript\G&P_v1\GitLab_Codes\example_c3d'); %add path towards c3d files
 
-table1=readtable('Trails_info.xlsx');% replace Trails_Info.xlsx bz complete path of teh file isnt on the matlab path already
+% table1=readtable('Trails_info.xlsx');% replace Trails_Info.xlsx bz complete path of teh file isnt on the matlab path already
 
-cd P:\Projects\NCM_CP\project_only\NCM_CP_GaitEventDetection\Manuscript\G&P_v1\GitLab_Codes\example_c3d %go to folder in which c3d files are saved
+% cd P:\Projects\NCM_CP\project_only\NCM_CP_GaitEventDetection\Manuscript\G&P_v1\GitLab_Codes\example_c3d %go to folder in which c3d files are saved
 
 %% Initialize variables
 c3dlist=table1{:,1}; % names of c3d files which you would like to evaluate
@@ -253,4 +253,5 @@ for i=1:length(c3dlist)
 end %FOR-loop c3d files
 
 disp(table1)% show results in command Window
+
 
